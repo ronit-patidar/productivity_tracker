@@ -221,6 +221,9 @@ section.allElems{
 .task h5 span{
   opacity: 0;
 }
+.task h5 span{
+  opacity: 0;
+}
 .task button{
   padding: 15px 30px;
   color: var(--pri);
@@ -231,7 +234,7 @@ section.allElems{
   color: #FFE8CD;
   font-weight: 600;
 }
-#mark-imp{
+#mark-imp {
   display: flex;
   color: var(--red);
   align-items: center;

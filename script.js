@@ -40,7 +40,8 @@ function initTodoApp() {
     let sum = "";
     currentTask.forEach(function (elem, idx) {
       sum += `<div class="task">
-                <h5>${elem.task} <span class="${elem.imp ? 'important' : ''}">imp</span></h5>
+                <h5>${elem.task} 
+                <span class=${elem.imp}>imp</span></h5>
                 <button data-id="${idx}">Mark as Completed</button>
               </div>`;
     });
@@ -90,6 +91,3 @@ renderTask(); // Call once to load saved tasks
 // Run both on page load
 opencards();
 initTodoApp();
-
-
-
