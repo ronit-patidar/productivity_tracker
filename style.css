@@ -254,3 +254,45 @@ section.allElems{
   font-style: italic;
   opacity: 0.7;
 }
+.daily-planner-fullpage{
+  display: none;
+}
+.daily-planner-fullpage h1{
+  font-size: 65px;
+}
+.daily-planner-fullpage .day-planner{
+  background-color: var(--tri2);
+  height: 85%;
+  margin-top: 40px;
+  width: 97.5%;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between; 
+  overflow: auto;
+  }
+.daily-planner-fullpage .day-planner .day-planner-time{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 49%;
+  margin-bottom: 10px;
+}
+.day-planner .day-planner-time p{
+  position: absolute;
+  top: 10%;
+  left:1%;
+  font-size: 18px;
+}
+.day-planner .day-planner-time input{
+  padding: 20px 45px;
+  width: 100%;
+  background-color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  padding-top: 32px;
+}

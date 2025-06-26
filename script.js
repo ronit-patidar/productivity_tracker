@@ -1,4 +1,4 @@
-function opencards() {
+function openCards() {
   var allElems = document.querySelectorAll(".elem");
   var allFullElems = document.querySelectorAll(".fullElem");
   allElems.forEach(function (elem) {
@@ -13,7 +13,6 @@ function opencards() {
     });
   });
 }
-opencards();
 
 function initTodoApp() {
   let form = document.querySelector(".addTask form");
@@ -87,7 +86,59 @@ renderTask(); // Call once to load saved tasks
 
 // localStorage.clear(); // ❌ REMOVE this unless debugging
 }
+function dayPlanner(){
+var hours = Array.from({length: 18}, (elem, idx) => {
+  return `${6 + idx}:00 - ${7 + idx}:00`;
+});
+
+let wholeDaySum = '';
+hours.forEach(function(elem, idx) {
+  wholeDaySum += `<div class="day-planner-time">
+            <p>${elem}</p>
+            <input id=${idx} type="text" placeholder="...">
+          </div>`;
+});
+
+var dayplanner = document.querySelector('.day-planner');
+dayplanner.innerHTML = wholeDaySum;
+
+var dayPlannerInput = document.querySelectorAll('.day-planner input');
+
+// ✅ Load existing data and timestamp
+let stored = JSON.parse(localStorage.getItem('dayPlanDataStorage'));
+let now = Date.now();
+let dayPlandata = [];
+
+if (stored && stored.timestamp && now - stored.timestamp < 24 * 60 * 60 * 1000) {
+  // within 24 hours, load data
+  dayPlandata = stored.data || [];
+} else {
+  // more than 24 hours passed, clear old data
+  localStorage.removeItem('dayPlanDataStorage');
+}
+
+// ✅ Populate inputs
+dayPlannerInput.forEach(function(elem) {
+  if (dayPlandata[elem.id]) {
+    elem.value = dayPlandata[elem.id];
+  }
+
+  elem.addEventListener('input', function() {
+    dayPlandata[elem.id] = elem.value;
+
+    // Save data along with current timestamp
+    localStorage.setItem('dayPlanDataStorage', JSON.stringify({
+      timestamp: Date.now(),
+      data: dayPlandata
+    }));
+  });
+});
+}
+
+
+
 
 // Run both on page load
-opencards();
+openCards();
 initTodoApp();
+dayPlanner();
