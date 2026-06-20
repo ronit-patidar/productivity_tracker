@@ -3,13 +3,16 @@ function openCards() {
 
   allElems.forEach(function (elem) {
     elem.addEventListener("click", function () {
-      // Use a matching id selector instead of indexing by elem.id,
-      // which breaks if ids aren't clean sequential numbers.
-      var target = document.getElementById(elem.id + "-full");
+      // Match by data-card instead of indexing by id (avoids needing
+      // duplicate ids on .elem and .fullElem, which is invalid HTML).
+      var cardName = elem.dataset.card;
+      var target = document.querySelector(
+        '.fullElem[data-card="' + cardName + '"]'
+      );
       if (target) {
         target.style.display = "block";
       } else {
-        console.warn("No matching .fullElem found for id:", elem.id);
+        console.warn("No matching .fullElem found for data-card:", cardName);
       }
     });
   });
