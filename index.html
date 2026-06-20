@@ -13,7 +13,7 @@
   <body>
     <div id="main">
       <section class="allElems">
-        <div class="todo elem" id="0">
+        <div class="todo elem" data-card="todo">
           <img
             src="https://images.unsplash.com/photo-1748077472389-017a7766cc9f?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
@@ -21,7 +21,7 @@
           <h2>To Do List</h2>
         </div>
 
-        <div class="daily elem" id="1">
+        <div class="daily elem" data-card="daily">
           <img
             src="https://images.unsplash.com/photo-1662316887698-ac24d8ba25a0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
@@ -29,7 +29,7 @@
           <h2>Daily Planner</h2>
         </div>
 
-        <div class="moti elem" id="2">
+        <div class="moti elem" data-card="moti">
           <img
             src="https://images.unsplash.com/photo-1575330729051-8bc61d985c61?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
@@ -37,7 +37,7 @@
           <h2>Motivation</h2>
         </div>
 
-        <div class="pomo elem" id="3">
+        <div class="pomo elem" data-card="pomo">
           <img
             src="https://images.unsplash.com/photo-1741173826628-199d13c4914a?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
@@ -45,7 +45,7 @@
           <h2>Pomodoro Timer</h2>
         </div>
 
-        <div class="goals elem" id="4">
+        <div class="goals elem" data-card="goals">
           <img
             src="https://images.unsplash.com/photo-1675251171768-5d49233cc410?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
@@ -54,69 +54,65 @@
         </div>
       </section>
 
-      <section class="fullElem todo-list-fullpage">
-        <button class="back" id="0">Close</button>
+      <section class="fullElem todo-list-fullpage" data-card="todo">
+        <button class="back">Close</button>
         <h2>Your Personalised Task List</h2>
         <div class="todo-container">
           <div class="addTask">
             <form>
-              <input id="task"type="text" placeholder="Enter Task" />
-              <textarea placeholder="Optional" name="" id=""
-              col="30"
-              row="10"
+              <input id="task" type="text" placeholder="Enter Task" />
+              <textarea
+                placeholder="Optional"
+                id="task-details"
+                cols="30"
+                rows="10"
               ></textarea>
               <div id="mark-imp">
-                <input type="checkbox" id="check">
-                <label for="checkbox">Mark as Important</label>
+                <input type="checkbox" id="check" />
+                <label for="check">Mark as Important</label>
               </div>
               <button>Add Task</button>
             </form>
           </div>
           <div class="allTask">
-            <div class="task">
-            </div>
+            <div class="task"></div>
           </div>
         </div>
       </section>
 
-      <section class="fullElem daily-planner-fullpage">
-        <button class="back" id="1">Close</button>
+      <section class="fullElem daily-planner-fullpage" data-card="daily">
+        <button class="back">Close</button>
         <h1>Plan your day to be more Productive</h1>
-        <div class="day-planner">
-          
-        </div>
+        <div class="day-planner"></div>
       </section>
 
-      <section class="fullElem motivational-fullpage">
-        <button class="back" id="2">Close</button>
+      <section class="fullElem motivational-fullpage" data-card="moti">
+        <button class="back">Close</button>
         <div class="motivation-container">
           <div class="motivation-wrapper">
-            <img src="./icons8-quote-100.png" alt="">
+            <img src="./icons8-quote-100.png" alt="" />
             <div class="motivation-1">
               <h2>Quote of the Day</h2>
             </div>
             <div class="motivation-2">
-              <h1>
-              </h1>
+              <h1></h1>
             </div>
             <div class="motivation-3">
-              <h2>
-              </h2>
+              <h2></h2>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="fullElem pomodoro-fullpage">
-        <button class="back" id="3">Close</button>
+      <section class="fullElem pomodoro-fullpage" data-card="pomo">
+        <button class="back">Close</button>
         <h1>Pomodoro Timer</h1>
       </section>
 
-      <section class="fullElem daily-goals-fullpage">
-        <button class="back" id="4">Close</button>
+      <section class="fullElem daily-goals-fullpage" data-card="goals">
+        <button class="back">Close</button>
         <h1>Daily Goals</h1>
       </section>
-
     </div>
     <script src="script.js"></script>
   </body>
