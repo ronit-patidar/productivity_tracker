@@ -72,6 +72,7 @@ section.allElems{
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
   gap: 20px;
   position: absolute;
 }
@@ -107,6 +108,7 @@ section.allElems{
   height: 100%;
   width: 100%;
   padding: 40px;
+  padding-top: 100px;
   background-color : #594545;
   display: none;
   position: absolute;
