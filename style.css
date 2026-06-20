@@ -45,6 +45,21 @@ nav{
   height: 60px;
   background-color: var(--tri2);
 }
+.page-title{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tri2);
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 20;
+  letter-spacing: 1px;
+}
 /* section.allElem -> us section ko target karo jiski class he all elem */
 /* section .allElem -> section ke andar jo allElem he usko target karo */
 
@@ -221,9 +236,6 @@ section.allElems{
 .task h5 span{
   opacity: 0;
 }
-.task h5 span{
-  opacity: 0;
-}
 .task button{
   padding: 15px 30px;
   color: var(--pri);
@@ -332,6 +344,7 @@ section.allElems{
   background-color: var(--tri2);
   padding: 30px;
   border-radius: 30px;
+  width: fit-content;
 }
 .motivation-1 h2{
   font-size: 40px;
@@ -359,9 +372,6 @@ section.allElems{
   font-size: 40px;
   font-weight: 500;
   text-align: right;
-}
-.motivation-1{
-  width: fit-content;
 }
 .motivation-wrapper img{
   position: absolute;
