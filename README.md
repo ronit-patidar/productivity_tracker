@@ -4,7 +4,7 @@ A clean, card-based productivity dashboard built with vanilla HTML, CSS, and Jav
 
 ## Demo
 
-> [Demo](https://productivity-tracker-roan.vercel.app/)
+> [Link](https://productivity-tracker-roan.vercel.app/)
 
 ## Features
 
